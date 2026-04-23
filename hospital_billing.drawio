@@ -1,0 +1,74 @@
+<mxfile host="app.diagrams.net" modified="2024-05-20T12:00:00.000Z" agent="Gemini" version="24.0.0">
+  <diagram id="HospitalERD_v2" name="Hospital Management ERD">
+    <mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <mxCell id="ent_patient" value="Patient" style="whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="180" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_hospital" value="Hospital" style="whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="680" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_record" value="Medical record" style="whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="180" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_doctor" value="Doctor" style="whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="680" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="rel_admitted" value="Admitted in" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="440" y="240" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_has_record" value="has" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="200" y="380" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_has_doctor" value="has" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="700" y="380" width="80" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="con1" value="N" style="endArrow=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;" edge="1" parent="1" source="ent_patient" target="rel_admitted"><mxGeometry width="50" height="50" relative="1" as="geometry" /></mxCell>
+        <mxCell id="con2" value="1" style="endArrow=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;" edge="1" parent="1" source="rel_admitted" target="ent_hospital"><mxGeometry width="50" height="50" relative="1" as="geometry" /></mxCell>
+        <mxCell id="con3" value="1" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" edge="1" parent="1" source="ent_patient" target="rel_has_record"><mxGeometry width="50" height="50" relative="1" as="geometry" /></mxCell>
+        <mxCell id="con4" value="N" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" edge="1" parent="1" source="rel_has_record" target="ent_record"><mxGeometry width="50" height="50" relative="1" as="geometry" /></mxCell>
+        <mxCell id="con5" value="1" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" edge="1" parent="1" source="ent_hospital" target="rel_has_doctor"><mxGeometry width="50" height="50" relative="1" as="geometry" /></mxCell>
+        <mxCell id="con6" value="N" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" edge="1" parent="1" source="rel_has_doctor" target="ent_doctor"><mxGeometry width="50" height="50" relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="pat_1" value="PDiagnosis" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="50" y="80" width="90" height="40" as="geometry" /></mxCell>
+        <mxCell id="pat_2" value="PName" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="170" y="80" width="90" height="40" as="geometry" /></mxCell>
+        <mxCell id="pat_3" value="Pat_id" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=4" vertex="1" parent="1"><mxGeometry x="290" y="80" width="90" height="40" as="geometry" /></mxCell>
+        <mxCell id="pat_4" value="PAddress" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="20" y="250" width="90" height="40" as="geometry" /></mxCell>
+        <mxCell id="pat_c1" edge="1" parent="1" source="ent_patient" target="pat_1" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="pat_c2" edge="1" parent="1" source="ent_patient" target="pat_2" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="pat_c3" edge="1" parent="1" source="ent_patient" target="pat_3" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="pat_c4" edge="1" parent="1" source="ent_patient" target="pat_4" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="hos_1" value="Hos id" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=4" vertex="1" parent="1"><mxGeometry x="610" y="80" width="90" height="40" as="geometry" /></mxCell>
+        <mxCell id="hos_2" value="HName" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="730" y="80" width="90" height="40" as="geometry" /></mxCell>
+        <mxCell id="hos_3" value="HAddress" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="850" y="80" width="90" height="40" as="geometry" /></mxCell>
+        <mxCell id="hos_4" value="HCity" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="870" y="250" width="90" height="40" as="geometry" /></mxCell>
+        <mxCell id="hos_c1" edge="1" parent="1" source="ent_hospital" target="hos_1" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="hos_c2" edge="1" parent="1" source="ent_hospital" target="hos_2" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="hos_c3" edge="1" parent="1" source="ent_hospital" target="hos_3" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="hos_c4" edge="1" parent="1" source="ent_hospital" target="hos_4" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="rec_1" value="Precord id" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=4" vertex="1" parent="1"><mxGeometry x="10" y="530" width="90" height="40" as="geometry" /></mxCell>
+        <mxCell id="rec_2" value="Date of examination" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="80" y="680" width="130" height="40" as="geometry" /></mxCell>
+        <mxCell id="rec_3" value="Problem" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="270" y="680" width="90" height="40" as="geometry" /></mxCell>
+        <mxCell id="rec_c1" edge="1" parent="1" source="ent_record" target="rec_1" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="rec_c2" edge="1" parent="1" source="ent_record" target="rec_2" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="rec_c3" edge="1" parent="1" source="ent_record" target="rec_3" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="doc_1" value="Salary" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="530" y="530" width="90" height="40" as="geometry" /></mxCell>
+        <mxCell id="doc_2" value="Qualification" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="630" y="680" width="100" height="40" as="geometry" /></mxCell>
+        <mxCell id="doc_3" value="DName" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="790" y="680" width="90" height="40" as="geometry" /></mxCell>
+        <mxCell id="doc_4" value="Doc id" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=4" vertex="1" parent="1"><mxGeometry x="870" y="530" width="90" height="40" as="geometry" /></mxCell>
+        <mxCell id="doc_c1" edge="1" parent="1" source="ent_doctor" target="doc_1" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="doc_c2" edge="1" parent="1" source="ent_doctor" target="doc_2" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="doc_c3" edge="1" parent="1" source="ent_doctor" target="doc_3" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="doc_c4" edge="1" parent="1" source="ent_doctor" target="doc_4" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
