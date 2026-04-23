@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net" agent="Gemini">
+  <diagram id="LibraryManagementERD" name="Library Management System">
+    <mxGraphModel dx="1348" dy="795" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ent_books" parent="1" style="whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" value="Books" vertex="1">
+          <mxGeometry height="40" width="100" x="240" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_publisher" parent="1" style="whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" value="Publisher" vertex="1">
+          <mxGeometry height="40" width="100" x="700" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_member" parent="1" style="whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" value="Member" vertex="1">
+          <mxGeometry height="40" width="100" x="700" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_published" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Published by" vertex="1">
+          <mxGeometry height="60" width="100" x="470" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_borrowed" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Borrowed by" vertex="1">
+          <mxGeometry height="60" width="100" x="240" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" edge="1" parent="1" source="ent_books" style="endArrow=none;html=1;startArrow=ERoneToMany;startFill=0;" target="rel_published">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" edge="1" parent="1" source="rel_published" style="endArrow=none;html=1;endArrow=ERoneToMany;endFill=0;" target="ent_publisher">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" edge="1" parent="1" source="ent_books" style="endArrow=none;html=1;startArrow=ERoneToMany;startFill=0;" target="rel_borrowed">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" edge="1" parent="1" source="rel_borrowed" style="endArrow=none;html=1;endArrow=ERoneToMany;endFill=0;" target="ent_member">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b_at1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Title" vertex="1">
+          <mxGeometry height="40" width="80" x="80" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="b_at2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Book_ID" vertex="1">
+          <mxGeometry height="40" width="80" x="200" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="b_at3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Author" vertex="1">
+          <mxGeometry height="40" width="80" x="320" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="b_at4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Price" vertex="1">
+          <mxGeometry height="40" width="80" x="40" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="b_at5" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Available" vertex="1">
+          <mxGeometry height="40" width="80" x="80" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="p_at1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Pub_ID" vertex="1">
+          <mxGeometry height="40" width="80" x="680" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p_at2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Address" vertex="1">
+          <mxGeometry height="40" width="80" x="860" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p_at3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Name" vertex="1">
+          <mxGeometry height="40" width="80" x="860" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="m_at1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Expiry_date" vertex="1">
+          <mxGeometry height="40" width="100" x="690" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="m_at2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Name" vertex="1">
+          <mxGeometry height="40" width="80" x="880" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="m_at3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Address" vertex="1">
+          <mxGeometry height="40" width="80" x="900" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="m_at4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Member_ID" vertex="1">
+          <mxGeometry height="40" width="100" x="620" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="la1" edge="1" parent="1" source="ent_books" style="endArrow=none;html=1;" target="b_at1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="la2" edge="1" parent="1" source="ent_books" style="endArrow=none;html=1;" target="b_at2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="la3" edge="1" parent="1" source="ent_books" style="endArrow=none;html=1;" target="b_at3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="la4" edge="1" parent="1" source="ent_books" style="endArrow=none;html=1;" target="b_at4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="la5" edge="1" parent="1" source="ent_publisher" style="endArrow=none;html=1;" target="p_at1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="la6" edge="1" parent="1" source="ent_member" style="endArrow=none;html=1;" target="m_at1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rrj-ed3SosJn5oGt4uNY-2" edge="1" parent="1" source="rel_borrowed" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="530" y="570" as="sourcePoint" />
+            <mxPoint x="290" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rrj-ed3SosJn5oGt4uNY-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="return date" vertex="1">
+          <mxGeometry height="40" width="100" x="200" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="rrj-ed3SosJn5oGt4uNY-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="due date" vertex="1">
+          <mxGeometry height="40" width="100" x="80" y="580" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
